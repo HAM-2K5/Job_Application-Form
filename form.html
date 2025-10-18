@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Job Application</title>
+<style>
+    body {
+        background-color: #07d3f7;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        background: #00aee0;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    h3 div {
+        background-color: powderblue;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    table {
+        width: 100%;
+        border-spacing: 10px;
+    }
+
+    td {
+        padding: 5px;
+    }
+
+    input, textarea, select {
+        width: 95%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+        width: auto;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        background-color: #0288d1;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background-color: #026ca0;
+    }
+</style>
+</head>
+<body>
+
+<form action="#" method="post">
+    <h1>Online Job Application</h1>
+
+    
+    <h3><div>PERSONAL INFORMATION</div></h3>
+    <table>
+        <tr>
+            <td><label for="fname">First Name*</label></td>
+            <td><input type="text" id="fname" name="first_name" required></td>
+
+            <td><label for="mname">Middle Name</label></td>
+            <td><input type="text" id="mname" name="middle_name"></td>
+
+            <td><label for="lname">Last Name*</label></td>
+            <td><input type="text" id="lname" name="last_name" required></td>
+        </tr>
+
+        <tr>
+            <td><label for="father">Father's Name*</label></td>
+            <td><input type="text" id="father" name="father_name" required></td>
+
+            <td><label for="mother">Mother's Name*</label></td>
+            <td><input type="text" id="mother" name="mother_name" required></td>
+        </tr>
+
+        <tr>
+            <td><label for="caddress">Current Address*</label></td>
+            <td><textarea id="caddress" name="current_address" required></textarea></td>
+
+            <td><label for="paddress">Permanent Address*</label></td>
+            <td><textarea id="paddress" name="permanent_address" required></textarea></td>
+        </tr>
+
+        <tr>
+            <td><label for="phone">Phone Number</label></td>
+            <td><input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number"></td>
+
+            <td><label for="mobile">Mobile Number*</label></td>
+            <td><input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10-digit number" required></td>
+        </tr>
+
+        <tr>
+            <td><label for="dob">Date of Birth*</label></td>
+            <td><input type="date" id="dob" name="dob" required></td>
+
+            <td><label for="pob">Place of Birth*</label></td>
+            <td><input type="text" id="pob" name="place_of_birth" required></td>
+        </tr>
+
+        <tr>
+            <td>Gender*</td>
+            <td colspan="5">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="qual">Highest Qualification*</label></td>
+            <td><input type="text" id="qual" name="qualification" required></td>
+
+            <td><label for="yop">Year of Passing*</label></td>
+            <td><input type="month" id="yop" name="year_of_passing" required></td>
+        </tr>
+
+        <tr>
+            <td>Languages Known*</td>
+            <td colspan="5">
+                <label><input type="checkbox" name="languages[]" value="English" required> English</label>
+                <label><input type="checkbox" name="languages[]" value="Malayalam"> Malayalam</label>
+                <label><input type="checkbox" name="languages[]" value="Hindi"> Hindi</label>
+            </td>
+        </tr>
+    </table>
+
+   
+    <h3><div>EDUCATION DETAILS</div></h3>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>SL.NO</th>
+            <th>Qualification</th>
+            <th>Institute/University</th>
+            <th>Year of Passing</th>
+            <th>Mark %</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" name="edu_qual_1" required></td>
+            <td><input type="text" name="edu_uni_1" required></td>
+            <td><input type="month" name="edu_year_1" required></td>
+            <td><input type="number" name="edu_mark_1" min="0" max="100" required></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="text" name="edu_qual_2"></td>
+            <td><input type="text" name="edu_uni_2"></td>
+            <td><input type="month" name="edu_year_2"></td>
+            <td><input type="number" name="edu_mark_2" min="0" max="100"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" name="edu_qual_3"></td>
+            <td><input type="text" name="edu_uni_3"></td>
+            <td><input type="month" name="edu_year_3"></td>
+            <td><input type="number" name="edu_mark_3" min="0" max="100"></td>
+        </tr>
+    </table>
+
+    
+    <h3><div>WORK EXPERIENCE</div></h3>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>SL.NO</th>
+            <th>Company Address</th>
+            <th>Work Role</th>
+            <th>From</th>
+            <th>To</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><textarea name="work_address_1" required></textarea></td>
+            <td><input type="text" name="work_role_1" required></td>
+            <td><input type="date" name="work_from_1" required></td>
+            <td><input type="date" name="work_to_1" required></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><textarea name="work_address_2"></textarea></td>
+            <td><input type="text" name="work_role_2"></td>
+            <td><input type="date" name="work_from_2"></td>
+            <td><input type="date" name="work_to_2"></td>
+        </tr>
+    </table>
+
+    
+    <h3><div>OTHERS</div></h3>
+    <table>
+        <tr>
+            <td>Job Type*</td>
+            <td>
+                <label><input type="radio" name="job_type" value="Permanent" required> Permanent</label>
+                <label><input type="radio" name="job_type" value="Contract"> Contract</label>
+                <label><input type="radio" name="job_type" value="Other"> Other</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="doj">Date of Joining*</label></td>
+            <td><input type="date" id="doj" name="date_of_joining" required></td>
+
+            <td><label for="toj">Time of Joining*</label></td>
+            <td><input type="time" id="toj" name="time_of_joining" required></td>
+        </tr>
+
+        <tr>
+            <td>Preferred Job Location*</td>
+            <td>
+                <label><input type="radio" name="location" value="Hyderabad" required> Hyderabad</label>
+                <label><input type="radio" name="location" value="Bangalore"> Bangalore</label>
+                <label><input type="radio" name="location" value="Chennai"> Chennai</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Willing to Relocate to Hyderabad*</td>
+            <td>
+                <label><input type="radio" name="relocate" value="Yes" required> Yes</label>
+                <label><input type="radio" name="relocate" value="No"> No</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4">
+                <label><input type="checkbox" name="confirm" required> I hereby declare that all the information provided above is true to the best of my knowledge.</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Submit Application"></td>
+            <td><input type="reset" value="Reset Form"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
